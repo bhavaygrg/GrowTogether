@@ -1,4 +1,14 @@
 {
+	"contracts": {
+		"HelloWorld": "./cadence/HelloWorld.cdc",
+		"NonFungibleToken": "./cadence/NonFungibleToken.cdc",
+		"BugNFT": "./cadence/BugNFT.cdc"
+	},
+	"deployments": {
+		"testnet": {
+			"testdev": ["HelloWorld", "NonFungibleToken", "BugNFT"]
+		}
+	},
 	"networks": {
 		"emulator": "127.0.0.1:3569",
 		"mainnet": "access.mainnet.nodes.onflow.org:9000",
@@ -8,7 +18,14 @@
 	"accounts": {
 		"emulator-account": {
 			"address": "f8d6e0586b0a20c7",
-			"key": "6d673b99daa6417c8726106e591f9a004f29cf3a78a3d76dd288f7b129e23010"
+			"key": "7d20b35f0da1d25dab629b0684c9a9fab708a94ea063d435be87447dfcd44317"
+		},
+		"testdev": {
+			"address": "19c75ac9cb3bd56b",
+			"key": {
+				"type": "file",
+				"location": "testdev.pkey"
+			}
 		}
 	}
 }

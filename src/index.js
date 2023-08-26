@@ -69,4 +69,4 @@ client.on('messageCreate', (message) => {
 
 // client.login("YOUR_BOT_TOKEN");
 
-client.login("MTE0NDg0ODcyODA4ODM4MzU2OQ.GelYY8.rmc9CA4LpCGJZosZ-kXpSJ7SzR8raLz60SjjVs");
+client.login("MTE0NDg0ODcyODA4ODM4MzU2OQ.G4IRWV.qaN5gEcycnH0unZY89YkYFF55TrrKKore_4YEI");
