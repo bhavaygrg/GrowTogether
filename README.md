@@ -22,7 +22,7 @@
 - Flow account and contract addresses
 - Images of bugs and special NFTs
 
-##Getting Started
+## Getting Started
 
 
 1. Clone this repository:
