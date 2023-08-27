@@ -80,6 +80,96 @@ client.on('messageCreate', (message) => {
     }
   });
 
+
+  //function for minting special nfts
+  async function mintSpecialNFT(userID, milestone) {
+    const authorization = await fcl.config().get('authorization');
+    const account = await fcl.send([fcl.getAccount(authorization)]);
+  
+    const response = await fcl.send([
+      fcl.transaction`
+        import SpecialNFT from 0x...  // Replace with the contract address
+  
+        transaction {
+          prepare(acct: AuthAccount) {
+            acct.save(<-SpecialNFT.mintSpecialNFT(${milestone}), to: /storage/NFTPath)
+          }
+        }
+      `,
+      fcl.args([]),
+      fcl.proposer(authorization),
+      fcl.authorizations([authorization]),
+      fcl.payer(authorization),
+      fcl.limit(100),
+      fcl.prepAccount(account),
+    ]);
+  
+    return response;
+  }
+
+
+
+
+  //CATCH FUNCTION: 
+  client.on('messageCreate', (message) => {
+    if (message.content === '!catch') {
+      const userID = message.author.id;
+      const userData = caughtBugs[userID];
+  
+      if (userData && userData.lastBugTime) {
+        const currentTime = Date.now();
+        if (currentTime - userData.lastBugTime <= bugCatchTimeout) {
+          const bugName = userData.bugNames.shift();
+  
+          if (bugName) {
+            userData.bugsCaught++;
+            const specialImagePath = `./images/${userData.bugsCaught}x.png`;
+            if (userData.bugsCaught === 3) {
+              message.reply("Congratulations! You've caught 3 bugs! 🎉");
+              setTimeout(() => {
+                message.channel.send({ files: [specialImagePath] });
+              }, 100);
+              mintSpecialNFT(userID, 3)
+
+            }
+            if (userData.bugsCaught === 6) {
+              message.reply("Congratulations! You've caught 6 bugs! 🎉");
+              setTimeout(() => {
+                message.channel.send({ files: [specialImagePath] });
+              }, 100);
+              mintSpecialNFT(userID, 6)
+
+            }
+            if (userData.bugsCaught === 9) {
+              message.reply("Congratulations! You've caught 9 bugs! 🎉");
+              setTimeout(() => {
+                message.channel.send({ files: [specialImagePath] });
+              }, 100);
+              mintSpecialNFT(userID, 9)
+
+            }
+            if (userData.bugsCaught === 12) {
+              message.reply("Congratulations! You've caught 12 bugs! 🎉");
+              setTimeout(() => {
+                message.channel.send({ files: [specialImagePath] });
+              }, 100);
+              mintSpecialNFT(userID, 12)
+
+            } else {
+              message.reply(`Congratulations! You caught a Bug! It has been added to your collection.`);
+            }
+          } else {
+            message.reply(`You have caught all available bugs. Wait for new bugs to appear.`);
+          }
+        } else {
+          message.reply(`The bug has run away. Try again when a new bug appears.`);
+        }
+      } else {
+        message.reply(`There are no bugs for you to catch right now.`);
+      }
+    }
+  });
+
 client.on('messageCreate', (message) => {
     if (message.content === '!plant') {
       if (!plantedTrees[message.channel.id]) {
@@ -112,6 +202,19 @@ client.on('messageCreate', (message) => {
             // setTimeout(() => {
             //     message.channel.send({ files: [imagePath] });
             //   }, 100);
+
+            //---------------------------------------------------------- adding timeout and catch functionality:----------------------------------------------------
+            const userID = message.author.id;
+
+            if (!caughtBugs[userID]) {
+              caughtBugs[userID] = {
+              bugNames: [],
+              lastBugTime: null,
+              bugsCaught: 0,
+              };
+            }
+            caughtBugs[userID].bugNames.push(randomImageFileName);
+            caughtBugs[userID].lastBugTime = Date.now();
             mintNFT()
             .then(() => {
               message.reply(`The tree has been watered! An insect has appeared and a new NFT has been minted! Current height: ${plantedTrees[message.channel.id].height}`);
@@ -141,4 +244,4 @@ client.on('messageCreate', (message) => {
 
 // client.login("YOUR_BOT_TOKEN");
 
-client.login("BOT_TOKEN");
+client.login("YOUR_BOT_TOKEN");
