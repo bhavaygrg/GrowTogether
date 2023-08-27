@@ -30,30 +30,6 @@ Getting Started
    cd TreePlanter
 2. Install Dependencies:
    ```npm install```
-Rename .env.example to .env and fill in the required values:
-
-env
-Copy code
-DISCORD_TOKEN=your_discord_bot_token
-FLOW_ACCESS_NODE_URL=your_flow_access_node_url
-FLOW_ACCOUNT_ADDRESS=your_flow_account_address
-FLOW_ACCOUNT_PRIVATE_KEY=your_flow_account_private_key
-Place your bug images in the images directory.
-
-Start the bot:
-
-bash
-Copy code
-node index.js
-
-
-
-
-
-
-
-
-
-Please note that you should replace `your_discord_bot_token`, `your_flow_access_node_url`, `your_flow_account_address`, and `your_flow_account_private_key` with the actual values. Also, ensure that the indentations are correct in your actual markdown file.
+Note:Please note that you should replace `your_discord_bot_token`, `your_flow_access_node_url`, `your_flow_account_address`, and `your_flow_account_private_key` with the actual values.
 
 
