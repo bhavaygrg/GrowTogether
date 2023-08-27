@@ -1,30 +1,29 @@
 <div align="center">
-  <h1>GrowTogether</h1>
+  #<h1>GrowTogether</h1>
   <p>Feel the joy of nurturing your virtual tree, catching bugs, and collecting NFT rewards 🪲🪴🎁</p>
 </div>
 
 
-Features
+##Features
 
-<div align="center">
+
 - Plant a tree in a channel using the `!plant` command.
 - Water the tree using the `!water` command to make insects appear.
 - Catch insects using the `!catch` command within a time limit.
 - Earn special NFT rewards for catching a certain number of bugs.
-</div>
 
-## <div align="center">Prerequisites</div>
 
-<div align="center">
+## Prerequisites
+
+
 - Node.js
 - Discord bot token
 - Flow account and contract addresses
 - Images of bugs and special NFTs
-</div>
 
-## <div align="center">Getting Started</div>
+Getting Started
 
-<div align="center">
+
 1. Clone this repository:
    ```bash
    https://github.com/bhavaygrg/TreePlanter.git
