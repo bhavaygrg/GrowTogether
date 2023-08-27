@@ -4,7 +4,7 @@
 </div>
 
 
-##Features
+## Features
 
 
 - Plant a tree in a channel using the `!plant` command.
@@ -29,7 +29,7 @@ Getting Started
    https://github.com/bhavaygrg/TreePlanter.git
    cd TreePlanter
 2. Install Dependencies:
-   ```npm install
+   ```npm install```
 Rename .env.example to .env and fill in the required values:
 
 env
