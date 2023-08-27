@@ -1,7 +1,8 @@
 <div align="center">
-  <h1>GrowTogether</h1>
+  <h1>🌳 GrowTogether 🌳</h1>
   <p>Feel the joy of nurturing your virtual tree, catching bugs, and collecting NFT rewards 🪲🪴🎁</p>
 </div>
+
 
 
 ## Features
@@ -32,6 +33,6 @@ Getting Started
    ```npm install```
 
    
--Note:Please note that you should replace `your_discord_bot_token`, `your_flow_access_node_url`, `your_flow_account_address`, and `your_flow_account_private_key` with the actual values.
+-Note: Please note that you should replace `your_discord_bot_token`, `your_flow_access_node_url`, `your_flow_account_address`, and `your_flow_account_private_key` with the actual values.
 
 
