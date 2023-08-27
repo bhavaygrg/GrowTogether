@@ -1,9 +1,10 @@
 <div align="center">
   <h1>GrowTogether</h1>
+  <p>Feel the joy of nurturing your virtual tree, catching bugs, and collecting NFT rewards 🪲🪴🎁</p>
 </div>
-<p>Feel the joy of nurturing your virtual tree, catching bugs, and collecting NFT rewards 🪲🪴🎁</p>
 
->Features
+
+Features
 
 <div align="center">
 - Plant a tree in a channel using the `!plant` command.
