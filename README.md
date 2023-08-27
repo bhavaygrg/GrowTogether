@@ -18,6 +18,7 @@
 
 
 - Node.js
+- Flow CLI
 - Discord bot token
 - Flow account and contract addresses
 - Images of bugs and special NFTs
@@ -33,7 +34,7 @@
    ```npm install```
 
    
--Note: Please note that you should replace `your_discord_bot_token`, `your_flow_access_node_url`, `your_flow_account_address`, and `your_flow_account_private_key` with the actual values.
+*Note: Please note that you should replace `your_discord_bot_token`, `your_flow_access_node_url`, `your_flow_account_address`, and `your_flow_account_private_key` with the actual values.*
 
 
 ## Inspiration
