@@ -244,4 +244,4 @@ client.on('messageCreate', (message) => {
 
 // client.login("YOUR_BOT_TOKEN");
 
-client.login("YOUR_BOT_TOKEN");
+client.login("MTE0NDg0ODcyODA4ODM4MzU2OQ.GwltjK.I70zt1mNTEMjftrAW9ItIT42MHSIzRCmYcw0fg");
