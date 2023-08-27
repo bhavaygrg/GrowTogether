@@ -1,5 +1,5 @@
 <div align="center">
-  #<h1>GrowTogether</h1>
+  <h1>GrowTogether</h1>
   <p>Feel the joy of nurturing your virtual tree, catching bugs, and collecting NFT rewards 🪲🪴🎁</p>
 </div>
 
