@@ -2,11 +2,14 @@
 	"contracts": {
 		"HelloWorld": "./cadence/HelloWorld.cdc",
 		"NonFungibleToken": "./cadence/NonFungibleToken.cdc",
-		"BugNFT": "./cadence/BugNFT.cdc"
+		"BugNFT": "./cadence/BugNFT.cdc",
+		"MetadataViews": "./cadence/MetadataViews.cdc",
+		"ViewResolver": "./cadence/ViewResolver.cdc",
+		"FungibleToken": "./cadence/FungibleToken.cdc"
 	},
 	"deployments": {
 		"testnet": {
-			"testdev": ["HelloWorld", "NonFungibleToken", "BugNFT"]
+			"testnet-account": ["HelloWorld","FungibleToken","ViewResolver", "NonFungibleToken","MetadataViews", "BugNFT"]
 		}
 	},
 	"networks": {
@@ -19,6 +22,16 @@
 		"emulator-account": {
 			"address": "f8d6e0586b0a20c7",
 			"key": "7d20b35f0da1d25dab629b0684c9a9fab708a94ea063d435be87447dfcd44317"
+		},
+		"testnet-account": {
+			"address": "0x9ebb2356ac2182f4",
+			"key": {
+				"type": "hex",
+				"index": 0,
+				"signatureAlgorithm": "ECDSA_secp256k1",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "61daaece865b9296240899ee6c6d2e202883bf147fa68943b819cfb931e7cee8"
+			}
 		},
 		"testdev": {
 			"address": "19c75ac9cb3bd56b",
