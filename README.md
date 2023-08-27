@@ -30,6 +30,8 @@ Getting Started
    cd TreePlanter
 2. Install Dependencies:
    ```npm install```
-Note:Please note that you should replace `your_discord_bot_token`, `your_flow_access_node_url`, `your_flow_account_address`, and `your_flow_account_private_key` with the actual values.
+
+   
+-Note:Please note that you should replace `your_discord_bot_token`, `your_flow_access_node_url`, `your_flow_account_address`, and `your_flow_account_private_key` with the actual values.
 
 
